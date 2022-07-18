@@ -28,8 +28,6 @@ result = response_nutrition.json()
 today_date = datetime.now().strftime("%d/%m/%Y")
 now_time = datetime.now().strftime("%X")
 
-headers_sheety = {"Authorization": "Bearer lexandru"}
-
 for exercise in result["exercises"]:
     sheet_inputs = {
         "workout": {
@@ -42,6 +40,6 @@ for exercise in result["exercises"]:
         }
     }
 
-    sheet_response = requests.post(add_row_sheety_endpoint, json=sheet_inputs, headers=headers_sheety)
+    sheet_response = requests.post(add_row_sheety_endpoint, json=sheet_inputs)
 
     print(sheet_response.text)

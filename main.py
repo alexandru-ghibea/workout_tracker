@@ -4,7 +4,7 @@ from datetime import datetime
 gender = "male"
 weight_kg = "70"
 height_cm = "1.70"
-AGE = "33"
+age = "33"
 add_row_sheety_endpoint = "your sheety add row endpoint"
 nutrition_app_id = "app id from nutrition page"
 nutrition_api_key = "api key from nutrition page"
@@ -19,7 +19,7 @@ parameters = {
     "gender": gender,
     "weight_kg": weight_kg,
     "height_cm": height_cm,
-    "age": AGE
+    "age": age
 }
 
 response_nutrition = requests.post(url=exercise_endpoint, json=parameters, headers=headers)
